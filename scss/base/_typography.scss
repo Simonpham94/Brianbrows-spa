@@ -1,0 +1,190 @@
+//====== BASE STYLE =====//
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto; 
+    padding: 0;
+    font-family: Futura,Trebuchet MS,Arial,sans-serif;
+    line-height: 1.5;
+    margin-bottom: 0;
+    a{
+        text-decoration: none;
+        color: black;
+        &:hover{
+            color: $color-primary;
+        }
+    }
+}
+
+
+
+//====== NAV BAR =====//
+
+.nav {
+    background-color: $color-secondary;
+    border-bottom: 2px solid $color-primary;
+    h3 {
+        text-align: center;
+    }
+}
+
+
+//======  MAIN =====//
+
+.wrap-shop{
+    margin-bottom: 30px;
+}
+
+
+main{
+    max-width: 1400px;
+    padding-left: 10px; 
+    padding-right: 10px;
+}
+    //---- Before and aftercare Page ---/
+    .lst-cautions {
+        list-style-type: disc;
+        padding-left: 10px;
+        line-height: 2;
+    }
+    label{
+           
+        cursor: pointer;
+        font-size: 1.2em;
+        font-weight: 700;
+        padding: 10px;
+        &:hover {
+        color: $color-primary;
+        }
+    }
+
+    input[type="checkbox"]{
+        position: absolute;
+        left: -9999px;
+    }
+
+    input[type="checkbox"] ~ ul{
+        height: 0;
+        transform: scaleY(0);
+    }
+
+    input[type="checkbox"]:checked ~ ul{
+        height: 100%;
+        transform-origin: top;
+        transition: transform .2s ease-out;
+        transform: scaleY(1); 
+      }
+    input[type="checkbox"]:checked + label{
+      
+        border-bottom: 1px solid #fff;
+      }
+
+
+    //---- Service Page ---/
+
+    .tbl-services {
+        line-height: 2.3;
+        font-weight: bold;
+        th:nth-child(3) {
+            color: #CFC89C;
+            }
+        th:nth-child(2) {
+            color: #AC9164; 
+            }
+        th {
+            text-align: left;
+            font-size: 1.3em;
+            border-bottom: 3px dashed #9F9E5E;
+        }
+
+        tr{
+            border-bottom: 1.5px dashed #9F9E5E;
+            td:nth-child(2) {
+                color: #AC9164;  
+            }
+
+            td:nth-child(3) {
+                color: #CFC89C;
+                font-weight: bold;
+            }
+        }
+    }
+
+    //---- Academy Page ---/
+    
+    .tbl-courses {
+        td:not(.highlight){
+            padding-left: 15px;
+        }
+        line-height: 2.3;
+        
+        th:nth-child(3) {
+            color: #CFC89C;
+            }
+        th:nth-child(2) {
+            color: #AC9164; 
+            }
+        th {
+            text-align: left;
+            font-size: 1.3em;
+            border-bottom: 3px dashed #9F9E5E;
+            font-weight: bold;
+        }
+
+        tr{
+            border-bottom: 1.5px dashed #9F9E5E;
+            td:nth-child(2) {
+                color: #AC9164;  
+            }
+
+            td:nth-child(3) {
+                color: #CFC89C;
+                font-weight: bold;
+            }
+        }
+
+
+    }
+
+    .highlight{
+       
+        font-weight: bold;
+    }
+
+//======  FOOTER =====//
+
+footer{
+    margin-top: 0;
+    border-top: 2px solid $color-primary;
+    h3{
+        margin-top: 0;
+        padding-top: 20px;
+    }
+}
+
+.wrap-footer{
+    padding-left: 10px;
+    background-color: $color-secondary;
+    li{
+        line-height: 1.8;
+    }
+}
+
+
+
+.closed {
+    color: crimson;
+}
+
+.back-to-top{
+    
+    font-weight: bold;
+    p{
+        margin-bottom: 0;
+        padding-bottom: 20px;
+        
+    }
+}

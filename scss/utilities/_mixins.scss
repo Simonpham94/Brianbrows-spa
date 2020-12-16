@@ -1,0 +1,27 @@
+@mixin btn {
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color:$color-btn;
+    box-shadow: 2px;
+    color: #fff;
+    font-size: 1em;
+    padding-top: 5px; 
+    padding-bottom: 5px;
+    &:hover{
+        background-color: #fff;
+        color: $color-primary;
+        font-weight: 700;
+    }
+}
+
+
+@mixin grid {
+    display: grid;
+    @content;
+}
+
+@mixin flex {
+    display: flex; 
+    @content;
+}
+

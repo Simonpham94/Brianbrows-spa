@@ -1,0 +1,28 @@
+
+//====== GRID =====//
+
+.grid {
+    &-body{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        grid-auto-rows: repeat(3, minmax(150px, auto));
+        grid-template-areas: 
+            "nav"
+            "main"
+            "footer"
+    }
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
